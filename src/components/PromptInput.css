@@ -1,0 +1,127 @@
+.prompt-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #1e1e2e;
+  border-bottom: 1px solid #313244;
+  flex-shrink: 0;
+}
+
+.prompt-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.prompt-input-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.prompt-input {
+  width: 100%;
+  background: #181825;
+  color: #cdd6f4;
+  border: 1px solid #45475a;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  height: 36px;
+}
+
+.prompt-input:focus {
+  border-color: #89b4fa;
+}
+
+.prompt-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.generate-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #89b4fa;
+  color: #1e1e2e;
+  border: none;
+  border-radius: 8px;
+  padding: 0 18px;
+  height: 36px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.generate-btn:hover:not(:disabled) {
+  background: #b4d0ff;
+}
+
+.generate-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 13px;
+  height: 13px;
+  border: 2px solid #1e1e2e;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+}
+
+.examples-label {
+  color: #6c7086;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.example-chip {
+  background: #313244;
+  color: #a6adc8;
+  border: 1px solid #45475a;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.example-chip:hover:not(:disabled) {
+  background: #45475a;
+  color: #cdd6f4;
+}
+
+.example-chip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

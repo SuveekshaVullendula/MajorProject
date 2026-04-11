@@ -1,0 +1,57 @@
+.editor-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #1e1e2e;
+}
+
+.editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: #181825;
+    border-bottom: 1px solid #313244;
+    flex-shrink: 0;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.editor-label {
+    font-size: 11px;
+    color: #6c7086;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.editor-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.editor-btn {
+    background: #313244;
+    color: #a6adc8;
+    border: 1px solid #45475a;
+    border-radius: 5px;
+    padding: 3px 9px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+}
+
+.editor-btn:hover {
+    background: #45475a;
+    color: #cdd6f4;
+}
+
+.editor-btn--primary {
+    background: #45475a;
+    color: #cdd6f4;
+}
+
+.editor-btn--primary:hover {
+    background: #585b70;
+}

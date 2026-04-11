@@ -1,0 +1,46 @@
+.resizable-split {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: 100%;
+    min-height: 0;
+}
+
+.split-pane {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+.split-divider {
+    width: 6px;
+    flex-shrink: 0;
+    background: #313244;
+    cursor: col-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+    position: relative;
+    z-index: 10;
+}
+
+.split-divider:hover,
+.split-divider:active {
+    background: #89b4fa;
+}
+
+.split-handle {
+    width: 2px;
+    height: 32px;
+    background: #45475a;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.split-divider:hover .split-handle,
+.split-divider:active .split-handle {
+    background: #1e1e2e;
+}

@@ -1,0 +1,90 @@
+.preview-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    background: #e2e2e8;
+    transition: background 0.2s;
+}
+
+.preview-wrapper--dark {
+    background: #11111b;
+}
+
+.preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 12px;
+    background: #181825;
+    border-bottom: 1px solid #313244;
+    flex-shrink: 0;
+}
+
+.preview-label {
+    font-size: 11px;
+    color: #6c7086;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.preview-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.preview-btn {
+    background: #313244;
+    color: #a6adc8;
+    border: 1px solid #45475a;
+    border-radius: 5px;
+    padding: 3px 9px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.preview-btn:hover:not(:disabled) {
+    background: #45475a;
+    color: #cdd6f4;
+}
+
+.preview-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.preview-btn--fs {
+    color: #a6e3a1;
+    border-color: #a6e3a1;
+}
+
+/* This is the key — scrollable area that fills remaining height */
+.preview-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.preview-device-frame {
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: width 0.25s ease;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* iframe expands to content, no fixed height cap */
+.preview-frame {
+    border: none;
+    width: 100%;
+    display: block;
+    min-height: 200px;
+}

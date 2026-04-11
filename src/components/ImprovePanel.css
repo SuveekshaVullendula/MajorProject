@@ -1,0 +1,96 @@
+.improve-panel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 14px;
+    background: #181825;
+    border-top: 1px solid #313244;
+    flex-wrap: wrap;
+}
+
+.improve-label {
+    font-size: 11px;
+    color: #6c7086;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.improve-form {
+    display: flex;
+    gap: 6px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.improve-input {
+    flex: 1;
+    background: #1e1e2e;
+    color: #cdd6f4;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.improve-input:focus {
+    border-color: #cba6f7;
+}
+
+.improve-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.improve-btn {
+    background: #cba6f7;
+    color: #1e1e2e;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.improve-btn:hover:not(:disabled) {
+    background: #d8b4fe;
+}
+
+.improve-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.improve-suggestions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.improve-chip {
+    background: #313244;
+    color: #a6adc8;
+    border: 1px solid #45475a;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.improve-chip:hover:not(:disabled) {
+    background: #45475a;
+    color: #cdd6f4;
+}
+
+.improve-chip:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}

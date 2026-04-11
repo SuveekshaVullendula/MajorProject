@@ -1,0 +1,108 @@
+.device-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 12px;
+    background: #181825;
+    border-bottom: 1px solid #313244;
+    flex-shrink: 0;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.device-btns {
+    display: flex;
+    gap: 4px;
+}
+
+.device-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #313244;
+    color: #a6adc8;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.device-btn span {
+    font-size: 11px;
+}
+
+.device-btn:hover {
+    background: #45475a;
+    color: #cdd6f4;
+}
+
+.device-btn--active {
+    background: #89b4fa;
+    color: #1e1e2e;
+    border-color: #89b4fa;
+    font-weight: 600;
+}
+
+.device-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.canvas-toggle {
+    background: #313244;
+    color: #a6adc8;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+
+.canvas-toggle:hover {
+    background: #45475a;
+    color: #cdd6f4;
+}
+
+.canvas-toggle--dark {
+    background: #45475a;
+    color: #f9e2af;
+    border-color: #f9e2af;
+}
+
+.zoom-control {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #313244;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.zoom-control button {
+    background: none;
+    border: none;
+    color: #a6adc8;
+    padding: 4px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+    line-height: 1;
+}
+
+.zoom-control button:hover {
+    background: #45475a;
+    color: #cdd6f4;
+}
+
+.zoom-control span {
+    font-size: 11px;
+    color: #cdd6f4;
+    min-width: 34px;
+    text-align: center;
+}

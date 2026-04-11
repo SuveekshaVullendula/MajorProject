@@ -1,0 +1,235 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #1e1e2e;
+  color: #cdd6f4;
+}
+
+/* ── App shell ── */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: #181825;
+  border-bottom: 1px solid #313244;
+  flex-shrink: 0;
+  min-height: 48px;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 18px;
+}
+
+.logo-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #cdd6f4;
+  letter-spacing: -0.02em;
+}
+
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.hdr-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #313244;
+  color: #a6adc8;
+  border: 1px solid #45475a;
+  border-radius: 7px;
+  padding: 5px 11px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.hdr-btn:hover:not(:disabled) {
+  background: #45475a;
+  color: #cdd6f4;
+}
+
+.hdr-btn--active {
+  background: #89b4fa;
+  color: #1e1e2e;
+  border-color: #89b4fa;
+  font-weight: 600;
+}
+
+.hdr-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.badge {
+  background: #f38ba8;
+  color: #1e1e2e;
+  border-radius: 10px;
+  padding: 1px 5px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* ── Top panel (prompt + refine) — collapsible ── */
+.top-panel {
+  flex-shrink: 0;
+  background: #1e1e2e;
+  border-bottom: 1px solid #313244;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.top-panel--expanded {
+  max-height: 110px;
+}
+
+.top-panel--collapsed {
+  max-height: 0;
+  border-bottom: none;
+}
+
+.top-panel-toggle {
+  width: 100%;
+  background: #181825;
+  border: none;
+  border-bottom: 1px solid #313244;
+  color: #6c7086;
+  font-size: 11px;
+  padding: 3px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.top-panel-toggle:hover {
+  color: #cdd6f4;
+  background: #1e1e2e;
+}
+
+/* ── Error ── */
+.error-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #45213a;
+  border-bottom: 1px solid #f38ba8;
+  color: #f38ba8;
+  padding: 6px 16px;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.error-banner button {
+  background: none;
+  border: none;
+  color: #f38ba8;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+/* ── Workspace (fills all remaining space) ── */
+.workspace {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+  /* critical — lets flex children shrink below content size */
+}
+
+/* ── Gallery view ── */
+.gallery-view {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 13px;
+  }
+
+  .app-header-actions {
+    gap: 4px;
+  }
+
+  .hdr-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+
+.palette-hint {
+  background: #1e1e2e;
+  border-color: #45475a;
+  color: #6c7086;
+  font-family: monospace;
+  letter-spacing: 0.03em;
+}
+
+.palette-hint:hover:not(:disabled) {
+  background: #313244;
+  color: #89b4fa;
+  border-color: #89b4fa;
+}
+
+.model-badge {
+  font-size: 10px;
+  background: #313244;
+  color: #6c7086;
+  border: 1px solid #45475a;
+  border-radius: 20px;
+  padding: 2px 8px;
+  font-family: monospace;
+  white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
