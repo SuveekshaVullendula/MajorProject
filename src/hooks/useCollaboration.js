@@ -3,7 +3,7 @@ import * as Y from 'yjs';
 import { WebsocketProvider } from 'y-websocket';
 import { MonacoBinding } from 'y-monaco';
 
-const WS_URL = 'ws://localhost:1234';
+const WS_URL = import.meta.env.VITE_COLLAB_SERVER_URL || 'ws://localhost:1234';
 
 // Generate a random user color + name for this session
 function randomUser() {
